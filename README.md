@@ -97,6 +97,11 @@ telecom-churn/
 
 # **Dashboard Snapshots**
 
+## End to End Pipeline Structure
+
+<img width="966" height="547" alt="image" src="https://github.com/user-attachments/assets/017fe83f-a2e7-4571-bd31-78335b4bc875" />
+
+
 ###  Dashboard Summary
 #### Created multiple pages:
   - **1.Summary Dashboard**: High-level KPIs (Churn %, Customer Count, Joiners)
