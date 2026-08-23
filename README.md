@@ -2,7 +2,7 @@
 
 ---
 
-## **Quick Section Summary**
+## **Quick Overview**
 
 - **Business Problem**
 - **Objectives**
