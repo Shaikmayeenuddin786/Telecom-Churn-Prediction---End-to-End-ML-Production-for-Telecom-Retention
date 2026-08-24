@@ -4,18 +4,20 @@
 
 ## **Quick Overview**
 
-- **Business Problem**
-- **Objectives**
-- **Technical Stack** 
-- **Project Features**
-- **Start-to-end pipeline**
-- **Repository Structure**
-- **Dashboard Snapshots**
-- **Top 10 Churn Reasons and Recommended Solutions to Sales, Marketting and Leadership teams to Reduce Churn significantly**
+| **Section** | **Details** |
+| :--- | :--- |
+| **Business Problem** | Telecom companies lose over 25% of customers yearly. Sales and marketing teams don't know who will leave or why, so they react too late. |
+| **Objectives** | 1. Predict which customers will churn<br>2. Find churn patterns by age, contract, services<br>3. Show insights in a Power BI dashboard<br>4. Let teams track churn in real-time |
+| **Technical Stack** | **Backend:** Python, FastAPI, Docker<br>**ML:** Scikit-learn, Random Forest, XGBoost<br>**Dashboard:** Power BI (DAX, Power Query)<br>**Data:** Pandas, NumPy, SQL |
+| **Project Features** | • ML model predicts churn probability<br>• REST API for real-time scoring (FastAPI + Docker)<br>• Power BI dashboard with live KPIs<br>• Batch predictions with risk levels<br>• Human-readable reasons for each prediction |
+| **Start-to-End Pipeline** | **Data Collection** → **EDA & Cleaning** → **Feature Engineering** → **Model Training** → **Save Artifacts** → **Build FastAPI** → **Containerize** → **Deploy** → **Dashboard Integration** |
+| **Top 10 Churn Reasons and Recommended Solutions** | To Sales, Marketting and Leadership teams to Reduce Churn significantly|
 
 ---
 
-## **Why This Project**
+
+
+## **The Big Picture**
 This project demonstrates an end-to-end ML deployment: **data → model → API → containerized service.**
 It’s built for real-world decisioning (risk segmentation, retention revenue estimation, actionable reasons per customer).
 It reflects a practical, business-focused approach to applying analytics for real-world impact in the **Telecom industry.**
