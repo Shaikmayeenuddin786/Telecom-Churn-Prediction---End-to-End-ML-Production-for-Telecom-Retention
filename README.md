@@ -1,5 +1,5 @@
 # **Telecommunications Provider**
-### **End-to-End Customer Churn Prediction | ML Deployment | Risk Segmentation | Retention Optimization**
+### **End-to-End Customer Churn Prediction & ML Deployment | Risk Segmentation & Retention Optimization | Top 10 Strategic Recommendations to Reduce Churn**
 <img width="900" height="450" alt="image" src="https://github.com/user-attachments/assets/7e438fca-f5f3-4097-92cb-433ffdc08bbc" />
 
 
