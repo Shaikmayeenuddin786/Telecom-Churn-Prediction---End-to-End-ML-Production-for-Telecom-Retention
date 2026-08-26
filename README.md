@@ -1,4 +1,4 @@
-# Telecom - Customer Churn End-to-End (Predictive ML + Production Deployment) | Risk Segmentation & Retention Optimization
+# Telecommunications Provider - End-to-End Customer Churn Prediction & ML Deployment | Risk Segmentation & Retention Optimization
 
 ---
 
