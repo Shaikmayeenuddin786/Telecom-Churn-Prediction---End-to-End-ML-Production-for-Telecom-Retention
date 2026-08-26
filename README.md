@@ -1,4 +1,5 @@
-# Telecommunications Provider - End-to-End Customer Churn Prediction & ML Deployment | Risk Segmentation & Retention Optimization
+# **Telecommunications Provider**
+### **| End-to-End Customer Churn Prediction & ML Deployment | Risk Segmentation & Retention Optimization |**
 
 ---
 
