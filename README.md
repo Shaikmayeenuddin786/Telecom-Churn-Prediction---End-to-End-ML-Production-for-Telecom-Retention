@@ -193,7 +193,7 @@ telecom-churn/
 
 ---
 
-# Author
+# 👤 Author
 
 ### **Shaik Mayeenuddin**
 ***Aspiring Data Scientist Professional | Supply Chain & Marketing Analytics Expert Pursuing a Master’s in Data Science (AI & ML) Student***
