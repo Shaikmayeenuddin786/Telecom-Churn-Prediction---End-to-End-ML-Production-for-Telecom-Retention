@@ -196,12 +196,14 @@ telecom-churn/
 
 ---
 
-# 👤 Author
+# 👤 **Author**
 
 ### **Shaik Mayeenuddin**
-***Aspiring Data Scientist Professional | Supply Chain & Marketing Analytics Expert Pursuing a Master’s in Data Science (AI & ML) Student***
-🔗 https://www.linkedin.com/in/shaikmayeenuddin
+
+#### Business Analyst | Data Analytics & AI/ML | Optimizing Processes to Drive Revenue & Retention
+
+🔗https://www.linkedin.com/in/shaikmayeenuddin
 
 
  This project is built upon the foundational work by **Pivotalstats** . 
- I am grateful for the analytical insights shared through their tutorials
+ I am grateful for their tutorials
