@@ -47,8 +47,34 @@ Without predictive insight into who is at risk and why, retention campaigns rema
 
 Power BI (DAX, Power Query), Python (Pandas, NumPy, Scikit-learn), SQL, Random Forest / XGBoost, Jupyter Notebook, FastAPI, Docker.
 
-## **End-to-End System Architecture**
+## **End-to-End System Architecture (Phase 1 - Phase 4)**
 <img width="1283" height="862" alt="image" src="https://github.com/user-attachments/assets/2e65428b-46de-47fe-ad67-62b6d4a4cfe7" />
+
+### Phase 1: SQL Pipeline & Data Staging
+
+   1. Profiling Raw Customer Data (performing null checks in stg_Churn)
+   2. Handling Missing Values (applying ISNULL imputations in prod_Churn)
+   3. Creating SQL Views (building vw_ChurnData and vw_JoinData database subsets)
+
+### Phase 2: Offline ML Training (Jupyter Notebook)
+
+   1. Encoding Categorical Variables (applying LabelEncoding to 19 vars with an 80/20 train-test split)
+   2. Training Random Forest Classifier (achieving ~85% accuracy and extracting feature importances)
+   3. Serializing Model Artifacts (saving churn_model.pkl and label_encoders.pkl using Joblib)
+
+### Phase 3: Real-Time Inference (FastAPI & Docker)
+
+   1. Building FastAPI Application (configuring GET /health and POST /predict API endpoints)
+   2. Containerizing App Environment (building Shaik_container on active port 8000:8000 using Docker)
+   3. Generating Output Scoring Payloads (returning risk probability scores, prediction flags, and segments)
+
+### Phase 4: Business Analytics & Visualization (Power BI)
+
+   1. Transforming Power Query ETL (generating Age/Tenure groups and unpivoting services data)
+   2. Calculating DAX Key Metrics (building formulas for Churn Rate % and Predicted Churners)
+   3. Deploying Interactive Power BI Dashboard (tracking customer demographics, active services, and risk segments)
+
+
 
 
 ## **End to End Pipeline Structure**
@@ -146,23 +172,23 @@ telecom-churn/
 
 ![Churn Analysis Summary_1](https://github.com/user-attachments/assets/6a693308-3202-4598-9272-b8fa56bcf756)
 
-**Page 1 summary**
+### **Page 1 summary**
 
-- Top Summary Box: Shows basics—6,418 total customers, 411 new joiners, 1,732 churned (27% rate).
-- Gender Pie: Males (64%) churn more than females (36%).
-- Age Bars: 20-35 year-olds have the highest churn (31%); under-20s are lowest.
-- State Bars: Top churn states: Jammu (57%), Assam (38%), Jharkhand (35%).
-- Internet Type Bars: Fiber optic users churn most (41%); none/low users least(8%).
-- Payment & Contract Bars: Mailed checks (38%) and month-to-month contracts (47%) drive high churn.
-- Services Table: Users with phone service (91%) or internet (93%) churn less if they have them.
-- Churn Reasons Bars: Competition causes most (44%); price least (11%).
-- Prediction Side: Flags 376 at-risk customers; profiles show mostly females (65%), short-tenure (month-to-month 94%), in states like Uttar Pradesh.
+- **Top Summary Box:** Shows basics—6,418 total customers, 411 new joiners, 1,732 churned (27% rate).
+- **Gender Pie:** Males (64%) churn more than females (36%).
+- **Age Bars:** 20-35 year-olds have the highest churn (31%); under-20s are lowest.
+- **State Bars:** Top churn states: Jammu (57%), Assam (38%), Jharkhand (35%).
+- **Internet Type Bars:** Fiber optic users churn most (41%); none/low users least(8%).
+- **Payment & Contract Bars:** Mailed checks (38%) and month-to-month contracts (47%) drive high churn.
+- **Services Table:** Users with phone service (91%) or internet (93%) churn less if they have them.
+- **Churn Reasons Bars:** Competition causes most (44%); price least (11%).
+- **Prediction Side:** Flags 376 at-risk customers; profiles show mostly females (65%), short-tenure (month-to-month 94%), in states like Uttar Pradesh.
 
 
 
 ![Churn Analysis Prediction_2](https://github.com/user-attachments/assets/7beef630-e2f8-4ef9-a2ca-e084234c7cee)
 
-**Page 2 summary of key churn findings**
+### **Page 2 summary of key churn findings**
 
 - The overall customer churn rate is **27%.**
 - Older customers (50+) and those on month-to-month contracts are most at risk.
