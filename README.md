@@ -47,12 +47,31 @@ Without predictive insight into who is at risk and why, retention campaigns rema
 
 Power BI (DAX, Power Query), Python (Pandas, NumPy, Scikit-learn), SQL, Random Forest / XGBoost, Jupyter Notebook, FastAPI, Docker.
 
----
-# **Project Features**
+## **End-to-End System Architecture**
+<img width="1283" height="862" alt="image" src="https://github.com/user-attachments/assets/2e65428b-46de-47fe-ad67-62b6d4a4cfe7" />
 
-**“I intentionally kept the ***Power BI dashboard and the churn prediction API decoupled.***
+
+## **End to End Pipeline Structure**
+1. **Data collection** — gather raw customer/usage, billing, and interaction data.  
+2. **Exploration & cleaning** — EDA, missing value handling, consistent naming, save training snapshot.  
+3. **Feature engineering** — tenure, averages, contract flags, payment method encodings.  
+4. **Train & validate** — model selection (Random Forest), cross-validation, calibration if needed.  
+5. **Save artifacts** — model (`.pkl`), encoders, feature list, metadata.  
+6. **Build service** — FastAPI `predict` endpoint with safe preprocessing.  
+7. **Containerize** — Dockerfile + build image.  
+8. **Local test** — Swagger, PowerShell, batch requests.  
+9. **Deploy** — API using FastAPI + Docker
+
+<img width="966" height="547" alt="image" src="https://github.com/user-attachments/assets/017fe83f-a2e7-4571-bd31-78335b4bc875" />
+
+
+---
+
+## **Project Features**
+
+*“I intentionally kept the **Power BI dashboard and the churn prediction API decoupled.**
 This ensured demo reliability, avoided unnecessary cloud costs, and kept the architecture clean.
-If required, the API can be integrated into Power BI using DirectQuery or REST.”**
+If required, the API can be integrated into Power BI using DirectQuery or REST.”*
 
 - **Layer 1:** Power BI — insight discovery & business storytelling
 - **Layer 2:** API — production-grade ML inference
@@ -65,20 +84,6 @@ If required, the API can be integrated into Power BI using DirectQuery or REST.�
    - **Business summary:** churn rate, churn count, retention revenue potential
    - Swagger UI documentation (auto-generated)
    - Dockerized for easy local or cloud deployment
-
-
-
-## **Start-to-end pipeline (concise steps)**
-1. **Data collection** — gather raw customer/usage, billing, and interaction data.  
-2. **Exploration & cleaning** — EDA, missing value handling, consistent naming, save training snapshot.  
-3. **Feature engineering** — tenure, averages, contract flags, payment method encodings.  
-4. **Train & validate** — model selection (Random Forest), cross-validation, calibration if needed.  
-5. **Save artifacts** — model (`.pkl`), encoders, feature list, metadata.  
-6. **Build service** — FastAPI `predict` endpoint with safe preprocessing.  
-7. **Containerize** — Dockerfile + build image.  
-8. **Local test** — Swagger, PowerShell, batch requests.  
-9. **Deploy** — API using FastAPI + Docker
-
 
 
 ## **Repository Structure**
@@ -104,11 +109,6 @@ telecom-churn/
 
 # **Dashboard Snapshots**
 
-## End to End Pipeline Structure
-
-<img width="966" height="547" alt="image" src="https://github.com/user-attachments/assets/017fe83f-a2e7-4571-bd31-78335b4bc875" />
-
-
 ###  Dashboard Summary
 #### Created multiple pages:
   - **1.Summary Dashboard**: High-level KPIs (Churn %, Customer Count, Joiners)
@@ -119,7 +119,7 @@ telecom-churn/
 
 ![Churn Analysis Summary_1](https://github.com/user-attachments/assets/6a693308-3202-4598-9272-b8fa56bcf756)
 
-**(A high-level Page 1 summary)**
+**Page 1 summary**
 
 - Top Summary Box: Shows basics—6,418 total customers, 411 new joiners, 1,732 churned (27% rate).
 - Gender Pie: Males (64%) churn more than females (36%).
@@ -135,7 +135,7 @@ telecom-churn/
 
 ![Churn Analysis Prediction_2](https://github.com/user-attachments/assets/7beef630-e2f8-4ef9-a2ca-e084234c7cee)
 
-**(A high-level Page 2 summary of key churn findings)**
+**Page 2 summary of key churn findings**
 
 - The overall customer churn rate is **27%.**
 - Older customers (50+) and those on month-to-month contracts are most at risk.
@@ -153,12 +153,12 @@ telecom-churn/
 ### Relationship Table Mapping
 ![Mapping_Tables](https://github.com/user-attachments/assets/1baf0c78-1b38-4af8-8342-fa5e1b82e84b)
 
+
 ---
 
-
 # **Top Churn Reasons and Recommended Solutions**
-## **Top 10 Churn Reasons:**
-### Sorted by Impact Priority
+## **Top 10 Churn Reasons:** (Root Causes of Customer Churn)
+#### Sorted by Impact Priority
 
 - **High Monthly Charges:** Customers paying higher-than-average fees often leave due to perceived lack of value or pricing dissatisfaction.
 - **Month-to-Month Contracts:** Customers on short-term, flexible plans are more likely to churn compared to annual or two-year contracts.
@@ -173,8 +173,8 @@ telecom-churn/
 
 
 
-# Top 10 Recommended Solutions to Sales, Marketting and Leadership teams to Reduce Churn significantly:
-### Sorted by Impact Priority
+## **Top 10 Strategic Solutions to Reduce Churn:** (Cross-Functional Guide for Sales, Marketing, and Leadership)
+#### Sorted by Impact Priority
 
 - **Target At-Risk Segments Proactively:** Use churn risk scores to send retention offers or personalized support to high-risk customers.
 - **Promote LongTerm Contracts:** Offer discounts or loyalty perks for customers who switch from month-to-month to 1- or 2-year plans.
