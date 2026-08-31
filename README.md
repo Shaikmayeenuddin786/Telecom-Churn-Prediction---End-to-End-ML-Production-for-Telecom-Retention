@@ -65,7 +65,32 @@ Power BI (DAX, Power Query), Python (Pandas, NumPy, Scikit-learn), SQL, Random F
 <img width="966" height="547" alt="image" src="https://github.com/user-attachments/assets/017fe83f-a2e7-4571-bd31-78335b4bc875" />
 
 
----
+## **Deployed Service API:** Swagger UI & Docker Setup
+### Production API Deployment & Containerization Breakdown
+
+**1. Comparing FastAPI and Swagger UI**
+
+* Building the API (using FastAPI to handle core logic and speed)
+* Testing the API (using Swagger UI to document and test paths)
+
+**2. Processing Predictions**
+
+* Handling Batch Inputs (accepting single records up to 100+ customers simultaneously)
+* Estimating Business Impact (calculating churn probability, risk metrics, and retention revenue potential)
+* **Impact:** FastAPI and Swagger UI enable real-time churn scoring to instantly calculate risk probabilities.
+  This helps businesses view the Retention Revenue Potential based on monthly charges to see exactly how much money can be saved by
+  keeping that specific user.
+  
+**3. Starting Docker Container**
+
+* Launching Docker Desktop (opening the desktop application tool)
+* Running Docker Build Commands (initiating the container using terminal port docker run -p 8000:8000 telecom-churn)
+
+**4. Testing Live Scoring in Swagger**
+
+* Opening Localhost Browser URL (navigating to http://localhost:8000/docs)
+* Executing Predict Request (using Try It Out to process real-time JSON input vectors)
+
 
 ## **Project Features**
 
@@ -84,6 +109,8 @@ If required, the API can be integrated into Power BI using DirectQuery or REST.â
    - **Business summary:** churn rate, churn count, retention revenue potential
    - Swagger UI documentation (auto-generated)
    - Dockerized for easy local or cloud deployment
+
+
 
 
 ## **Repository Structure**
