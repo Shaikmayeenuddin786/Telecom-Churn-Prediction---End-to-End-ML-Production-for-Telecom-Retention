@@ -1,4 +1,4 @@
-# **Telecommunications Provider**
+# **Telecommunications Industry**
 
 ### End-to-End Customer Churn Prediction & ML Deployment | Risk Segmentation & Retention Optimization | Swagger UI for Live Prediction Scoring | Top 10 Strategic Recommendations to Reduce Churn
 
@@ -11,15 +11,16 @@
 
 | **Section** | **Details** |
 | :--- | :--- |
-| **Business Problem** | Telecom companies lose over 25% of customers yearly. Sales and marketing teams don't know who will leave or why, so they react too late. |
-| **Objectives** | 1. Predict which customers will churn<br>2. Find churn patterns by age, contract, services<br>3. Show insights in a Power BI dashboard<br>4. Let teams track churn in real-time |
-| **Technical Stack** | **Backend:** Python, FastAPI, Docker<br>**ML:** Scikit-learn, Random Forest, XGBoost<br>**Dashboard:** Power BI (DAX, Power Query)<br>**Data:** Pandas, NumPy, SQL |
-| **Project Features** | • ML model predicts churn probability<br>• REST API for real-time scoring (FastAPI + Docker)<br>• Power BI dashboard with live KPIs<br>• Batch predictions with risk levels<br>• Human-readable reasons for each prediction |
-| **Start-to-End Pipeline** | **Data Collection** → **EDA & Cleaning** → **Feature Engineering** → **Model Training** → **Save Artifacts** → **Build FastAPI** → **Containerize** → **Deploy** → **Dashboard Integration** |
-| **Top 10 Churn Reasons and Recommended Solutions** | To Sales, Marketting and Leadership teams to Reduce Churn significantly|
+| **Business Problem** | Telecom companies lose over 25% of customers yearly. Sales and marketing teams lack timely, data-driven signals to intervene before customers leave, making retention campaigns reactive and inefficient. |
+| **Objectives** | 1. Predict which customers are likely to churn<br>2. Analyze churn patterns (demographics, services, contract type)<br>3. Deploy a real-time prediction API (FastAPI + Docker)<br>4. Deliver actionable insights via an interactive Power BI dashboard |
+| **Technical Stack** | **ML Modeling:** Python, Scikit-learn (Random Forest, XGBoost)<br>**API & Deployment:** FastAPI, Docker, Swagger UI<br>**Dashboard & BI:** Power BI (DAX, Power Query)<br>**Data & ETL:** Pandas, NumPy, SQL |
+| **Project Features** | • ML model predicts churn probability with ~85% accuracy<br>• REST API for real-time batch scoring (FastAPI + Docker)<br>• Interactive Power BI dashboard with live KPIs<br>• Swagger UI for easy API testing and documentation<br>• Business summary: churn rate, count, and retention revenue potential<br>• Production-grade error handling and logging |
+| **Start-to-End Pipeline** | **SQL Pipeline** (Data staging & views) → **Offline ML Training** (EDA, Feature Engineering, Model Training) → **Real-Time Inference** (FastAPI, Docker, Swagger) → **Business Analytics** (Power BI dashboard) |
+| **Top 10 Churn Reasons** | 1. High Monthly Charges<br>2. Month-to-Month Contracts<br>3. Low Tenure / New Customers<br>4. Multiple Complaints or Support Calls<br>5. Service Downtime / Technical Issues<br>6. Lack of Add-On Services<br>7. No Internet Service / DSL Users<br>8. Senior Citizen Segment<br>9. Lack of Loyalty Incentives<br>10. No Paperless Billing or AutoPay |
+| **Top 10 Strategic Solutions** | 1. Target At-Risk Segments Proactively<br>2. Promote Long-Term Contracts<br>3. Upsell Value-Add Services<br>4. Improve Onboarding for New Customers<br>5. Enhance Service Quality for DSL Users<br>6. Reward Loyalty<br>7. Reduce Support Friction<br>8. Introduce Tiered Pricing Models<br>9. Monitor and Act on Feedback<br>10. Incentivize Paperless Billing and AutoPay |
+| **Future Upgrades & Scaling Plan** | • **Central Feature Store** – Keep training & live data identical<br>• **Spark for Big Data** – Handle millions of records with PySpark<br>• **Automated Retraining** – Detect model drift & auto-update<br>• **Smart Action Engine** – Predict & send offers that retain customers |
 
 ---
-
 
 
 ## **The Big Picture**
