@@ -240,6 +240,16 @@ telecom-churn/
 - **Monitor and Act on Feedback:** Regularly review NPS, CSAT, and complaint data; close the loop with customers when issues are resolved.
 - **Incentivize Paperless Billing and AutoPay:** Offer small credits or priority support to customers who switch to these options (shows commitment).
 
+## **Future Upgrades & Scaling Plan**
+
+1. Central feature store: Store all calculated data features (like average monthly usage or payment history) in a single hub. This keeps training data and real-time app data identical, preventing unexpected model errors.
+
+2. Spark for big data: Replace **Pandas** with **PySpark** on Azure Databricks. Pandas runs out of memory on huge datasets, while PySpark easily handles millions of customer records across large data lakes.
+
+3. Automated tracking and retraining: Set up automated alerts to track model drift (when customer habits change over time). Automate  retraining pipeline  so the model updates itself without manual work.
+
+4. Smart action engine: Going beyond predicting "who will leave and predict what will make them stay" . Modeling to send automatic retention offers (like discounts or free upgrades) only to those customers who will actually respond to them.
+
 
 ##  **How to run**
 
